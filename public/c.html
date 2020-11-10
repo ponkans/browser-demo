@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>之前遇到的跳转业务场景-模拟</div>
+<div><a href="http://127.0.0.1:3001/d.html" target="_blank">不同站点跳转(无影响)</a></div>
+<div><a href="http://localhost:3001/d.html" target="_blank">同一站点跳转(有影响)</a></div>
+<div class="count"></div>
+</body>
+<script>
+    let count = 100
+    setInterval(() => {
+        count--
+        document.querySelector('.count').insertAdjacentHTML( 'beforeend', `    ${count}` )
+    }, 500)
+</script>
+</html>
